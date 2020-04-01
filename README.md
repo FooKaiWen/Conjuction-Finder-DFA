@@ -12,8 +12,6 @@ It has visualizations as one of the outputs, such as emboldened pattern(s), stat
 - [Usage](#usage)
 - [API](#api)
 - [Maintainers](#maintainers)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Install
 
