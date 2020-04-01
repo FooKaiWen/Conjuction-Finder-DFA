@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="content">
+        <h2 id="title">Conjunction Finder</h2>
+        <p id="input"><b>Input: </b></p>
+        <input type="file" id="input-file">
+        <p id="content-target"></p>
+        <hr>
+        <p id="output"><b>Output: </b></p>
+        <hr>
+        <!-- ko if: stats -->
+        <h3>Statistics</h3>
+        <p>Unique Conjunction Found: <span data-bind="text: uniqueNum"></span></p>
+        <table id="customers">
+            <thead>
+                <tr>
+                    <th>Conjunction Found</th>
+                    <th>Number of Occurrences</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: Object.keys(stats())">
+                <tr>
+                    <td data-bind="text: $data"></td>
+                    <!-- ko if: $parent.stats()[$data] -->
+                    <td data-bind="text: $parent.stats()[$data]"></td>
+                    <!-- /ko -->
+                </tr>
+            </tbody>
+        </table>
+        <!-- /ko -->
+        <script type='text/javascript' src='knockout-3.5.1.js'></script>
+        <script src="chance.js"></script>
+        <script src="main.js"></script>
+        <script src="FileSaver.js"></script>
+        <br>
+    </div>
+    <footer id="footer">
+        <address>
+            CPT443 ASSN1 - DFA for Conjunction Finder, by Foo Kai Wen 132905
+        </address>
+    </footer>
+</body>
+
+</html>
