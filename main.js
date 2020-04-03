@@ -1,5 +1,5 @@
-document.getElementById('input-file')
-    .addEventListener('change', getFile)
+// document.getElementById('input-file')
+//     .addEventListener('change', getFile)
 
 function getFile(event) {
     const input = event.target
@@ -36,7 +36,7 @@ function readFileContent(file) {
 var Model = function () {
     var self = this;
     self.data = ko.observable({})
-    self.stats = ko.observable({})
+    self.stats = ko.observable()
     self.statsName = ko.observable({})
     self.statsValue = ko.observable({})
     self.uniqueNum = ko.observable(0)
