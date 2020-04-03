@@ -558,7 +558,6 @@ def split(string):
 def DFA(data):
     finalOutput = list()
     outputDict = dict()
-    wer = list()
     # Preprocessing the strings
     for lines in data:
         # split string into list by whitespace
