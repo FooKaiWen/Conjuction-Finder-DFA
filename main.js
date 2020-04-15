@@ -37,18 +37,12 @@ var Model = function () {
     var self = this;
     self.data = ko.observable({})
     self.stats = ko.observable()
-    self.statsName = ko.observable({})
-    self.statsValue = ko.observable({})
     self.uniqueNum = ko.observable(0)
     self.text = ko.observable('')
     self.data.subscribe(function (data) {
         self.text(data['outputText']) ? data['outputText'] : '';
         self.stats(data['outputStats']) ? data['outputStats'] : '';
         self.uniqueNum(data['outputUnique']) ? data['outputUnique'] : '';
-    })
-    self.stats.subscribe(function (data) {
-        self.statsName(Object.keys(data))
-        self.statsValue(Object.values(data))
     })
     self.text.subscribe(function (data) {
         data = data.replace(/(\r\n|\n|\r)/g, "<br />");

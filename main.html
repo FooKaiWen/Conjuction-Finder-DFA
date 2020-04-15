@@ -22,13 +22,15 @@
                 <tr>
                     <th>Conjunction Found</th>
                     <th>Number of Occurrences</th>
+                    <th>Type of Conjunction</th>
                 </tr>
             </thead>
             <tbody data-bind="foreach: Object.keys(stats())">
                 <tr>
                     <td data-bind="text: $data"></td>
                     <!-- ko if: $parent.stats()[$data] -->
-                    <td data-bind="text: $parent.stats()[$data]"></td>
+                    <td data-bind="text: $parent.stats()[$data]['num']"></td>
+                    <td data-bind="text: $parent.stats()[$data]['type']"></td>
                     <!-- /ko -->
                 </tr>
             </tbody>

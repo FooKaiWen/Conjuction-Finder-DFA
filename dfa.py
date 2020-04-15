@@ -332,11 +332,14 @@ def state34(c):
 
 
 def state35(c):
-    if (c == 'e'):
-        dfa = 1
-    else:
+    if (c):
         dfa = -1
     return dfa
+    # if (c == 'e'):
+    #     dfa = 1
+    # else:
+    #     dfa = -1
+    # return dfa
 
 
 def state36(c):
@@ -711,21 +714,29 @@ def DFA(data):
                 elif (currentState == 60):
                     currentState = state60(char)
 
+            coorConj = ['for', 'and', 'nor', 'but', 'or', 'yet', 'so']
+
             if (currentState in acceptingStates):
                 matchedGroup = re.match(
                     r'(|[~`!@#$%^&()_={}[\]:;,.<>+\/?-])(\w+)(|[ ~`!@#$%^&()_={}[\]:;,.<>+\/?-])', word)
                 matchedWord = matchedGroup.group(2)
                 tempWord = re.sub(r'[^\w]', ' ', word).strip().casefold()
+
+                stats = {
+                    'num': 0,
+                    'type': ''
+                }
+
                 if (outputDict.get(tempWord) is None):
-                    outputDict[tempWord] = 0
-                outputDict[tempWord] += 1
+                    outputDict[tempWord] = stats
+                outputDict[tempWord]['num'] += 1
+                if(tempWord in coorConj):
+                    outputDict[tempWord]['type'] = 'Coordinating Conjunction'
+                else:
+                    outputDict[tempWord]['type'] = 'Subcoordinating Conjunction'
                 index = word.find(matchedWord)
                 word = word[:index] + '<b>' + word[index:index +
                                                    len(matchedWord)] + '</b>' + word[index+len(matchedWord):]
-                # alt way
-                # if (colorDict.get(word) is None):
-                #     colorDict[word] = chance.color()
-                # word = "<b style='color:{};'> {} </b>".format(colorDict.get(word), word)
             tempList.append(word)
         tempString = " ".join(tempList)
         finalOutput.append(tempString)
