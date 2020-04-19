@@ -44,6 +44,9 @@ and
 /api/?text=
 ```
 
+## Output
+![Sample Output](Image/SampleOutput.PNG)
+
 ## Maintainers
 
 [@FooKaiWen](https://github.com/FooKaiWen)
