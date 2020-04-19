@@ -21,20 +21,31 @@ Python 3 and NPM should be installed
 
 ## Usage
 
-Run the server with
+Run the servers with
 ```
 node server.js
+```
+and
+```
+python api.py
 ```
 
 And you are good to go with opening main.html in your browser
 
 ## API
 
-There is ONE internal API to be utilized at the moment.
+There are TWO internal APIs to be utilized at the moment.
 
 ```
 /readtext
 ```
+and
+```
+/api/?text=
+```
+
+## Output
+![Sample Output](Image/SampleOutput.PNG)
 
 ## Maintainers
 
