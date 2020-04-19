@@ -6,13 +6,6 @@ from chance import chance
 
 # Functions definition
 
-
-def readFile():
-    with open('sampleText.txt', 'r') as textFile:
-        data = textFile.readlines()
-    return data
-
-
 def writeFile(text, stats, uniqueNum, filename="output.json"):
     tempDict = {
         'outputText': text,
@@ -25,8 +18,6 @@ def writeFile(text, stats, uniqueNum, filename="output.json"):
 
 # This function is for the dfa = starting
 # dfa = state (zeroth) of DFA
-
-
 def start(c):
     if (c == 'o'):
         dfa = 1
@@ -52,10 +43,10 @@ def start(c):
         dfa = 45
     elif(c == 'w'):
         dfa = 46
-    # -1 is used to check for any
+    # 61 is used to check for any
     # invalid symbol
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -63,13 +54,13 @@ def state1(c):
     if (c == 'r'):
         dfa = 2
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
 def state2(c):
     if (c):
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -77,7 +68,7 @@ def state3(c):
     if(c == 'o'):
         dfa = 1
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -91,7 +82,7 @@ def state4(c):
     elif(c == 's'):
         dfa = 35
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -99,13 +90,13 @@ def state5(c):
     if (c == 'd'):
         dfa = 6
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
 def state6(c):
     if(c):
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -113,7 +104,7 @@ def state7(c):
     if (c == 'e'):
         dfa = 8
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -121,13 +112,13 @@ def state8(c):
     if (c == 't'):
         dfa = 9
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
 def state9(c):
     if (c):
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -137,7 +128,7 @@ def state10(c):
     elif (c == 'e'):
         dfa = 24
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -147,13 +138,13 @@ def state11(c):
     elif (c == 'i'):
         dfa = 20
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
 def state12(c):
     if (c):
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -161,7 +152,7 @@ def state13(c):
     if (c == 'h'):
         dfa = 14
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -171,7 +162,7 @@ def state14(c):
     elif (c == 'a'):
         dfa = 58
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -179,7 +170,7 @@ def state15(c):
     if (c == 'u'):
         dfa = 16
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -187,7 +178,7 @@ def state16(c):
     if (c == 'g'):
         dfa = 17
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -195,13 +186,13 @@ def state17(c):
     if (c == 'h'):
         dfa = 18
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
 def state18(c):
     if (c):
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -209,7 +200,7 @@ def state19(c):
     if (c == 't'):
         dfa = 13
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -217,7 +208,7 @@ def state20(c):
     if (c == 'n'):
         dfa = 21
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -225,7 +216,7 @@ def state21(c):
     if (c == 'c'):
         dfa = 22
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -233,13 +224,13 @@ def state22(c):
     if (c == 'e'):
         dfa = 23
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
 def state23(c):
     if (c):
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -247,7 +238,7 @@ def state24(c):
     if (c == 'c'):
         dfa = 25
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -255,7 +246,7 @@ def state25(c):
     if (c == 'a'):
         dfa = 26
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -263,7 +254,7 @@ def state26(c):
     if (c == 'u'):
         dfa = 27
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -271,7 +262,7 @@ def state27(c):
     if (c == 's'):
         dfa = 22
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -279,7 +270,7 @@ def state28(c):
     if (c == 'n'):
         dfa = 29
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -289,7 +280,7 @@ def state29(c):
     elif(c == 't'):
         dfa = 30
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -297,7 +288,7 @@ def state30(c):
     if (c == 'i'):
         dfa = 31
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -305,13 +296,13 @@ def state31(c):
     if (c == 'l'):
         dfa = 32
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
 def state32(c):
     if (c):
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -319,7 +310,7 @@ def state33(c):
     if (c == 't'):
         dfa = 34
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -327,18 +318,18 @@ def state34(c):
     if (c == 'e'):
         dfa = 1
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
 def state35(c):
     if (c):
-        dfa = -1
+        dfa = 61
     return dfa
     # if (c == 'e'):
     #     dfa = 1
     # else:
-    #     dfa = -1
+    #     dfa = 61
     # return dfa
 
 
@@ -346,13 +337,13 @@ def state36(c):
     if (c == 'f'):
         dfa = 37
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
 def state37(c):
     if (c):
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -360,7 +351,7 @@ def state38(c):
     if (c == 'e'):
         dfa = 39
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -368,7 +359,7 @@ def state39(c):
     if (c == 's'):
         dfa = 40
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -376,13 +367,13 @@ def state40(c):
     if (c == 's'):
         dfa = 41
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
 def state41(c):
     if (c):
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -390,7 +381,7 @@ def state42(c):
     if (c == 'i'):
         dfa = 43
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -398,7 +389,7 @@ def state43(c):
     if (c == 't'):
         dfa = 44
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -406,7 +397,7 @@ def state44(c):
     if (c == 'h'):
         dfa = 34
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -416,7 +407,7 @@ def state45(c):
     elif (c == 'e'):
         dfa = 42
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -424,7 +415,7 @@ def state46(c):
     if (c == 'h'):
         dfa = 47
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -436,7 +427,7 @@ def state47(c):
     elif(c == 'i'):
         dfa = 54
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -448,7 +439,7 @@ def state48(c):
     elif(c == 'n'):
         dfa = 52
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -456,7 +447,7 @@ def state49(c):
     if (c == 'h'):
         dfa = 34
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -464,7 +455,7 @@ def state50(c):
     if (c == 'e'):
         dfa = 51
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -474,7 +465,7 @@ def state51(c):
     elif(c == 'a'):
         dfa = 40
     elif(c):
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -486,7 +477,7 @@ def state52(c):
     elif(c == 's'):
         dfa = 22
     elif(c):
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -494,7 +485,7 @@ def state53(c):
     if (c == 'v'):
         dfa = 34
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -504,7 +495,7 @@ def state54(c):
     elif(c == 'c'):
         dfa = 56
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -512,7 +503,7 @@ def state55(c):
     if (c == 'e'):
         dfa = 53
     elif(c):
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -520,7 +511,7 @@ def state56(c):
     if (c == 'h'):
         dfa = 57
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -528,7 +519,7 @@ def state57(c):
     if (c == 'e'):
         dfa = 53
     elif(c):
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -538,19 +529,19 @@ def state58(c):
     elif(c == 'n'):
         dfa = 60
     else:
-        dfa = -1
+        dfa = 61
     return dfa
 
 
 def state59(c):
     if(c):
-        dfa = -1
+        dfa = 61
     return dfa
 
 
 def state60(c):
     if(c):
-        dfa = -1
+        dfa = 61
     return dfa
 
 
@@ -565,7 +556,8 @@ def DFA(data):
     for lines in data:
         # split string into list by whitespace
         line = lines.split(" ")
-        # retain and separate the newline character from words with whitespace
+        # separate the newline character from words with whitespace
+        # and
         # split the separated string into list by whitespace
         line = [split(i[:-1] + " " + i[-1:])
                 if re.match(r'([^\s]+)\n', i) else i for i in line]
@@ -587,7 +579,7 @@ def DFA(data):
             currentState = 0
             for char in word:
                 char = char.casefold()
-                if(re.match(r'[~`!@#$%^&()_={}[\]:;,.<>+\/?-]', char)):
+                if(re.match(r'[~`!@#$%^&()_={}[\]:;,.<>+\/?-]', char) and (currentState == 0 or currentState in acceptingStates)):
                     continue
 
                 # DFA starts here
@@ -745,8 +737,9 @@ def DFA(data):
 
 
 # Main code
-data = readFile()
-
-finalOutput, outputDict = DFA(data)
-
-writeFile(finalOutput, outputDict, len(outputDict))
+def dfa_api(data):
+    splitData = data.split('\n')
+    splitData = [data + "\n" for data in splitData]
+    finalOutput, outputDict = DFA(splitData)
+    writeFile(finalOutput, outputDict, len(outputDict))
+    return True
