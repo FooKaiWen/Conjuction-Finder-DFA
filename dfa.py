@@ -20,529 +20,529 @@ def writeFile(text, stats, uniqueNum, filename="output.json"):
 # dfa = state (zeroth) of DFA
 def start(c):
     if (c == 'o'):
-        dfa = 1
+        state = 1
     elif (c == 'f'):
-        dfa = 3
+        state = 3
     elif (c == 'a'):
-        dfa = 4
+        state = 4
     elif (c == 'y'):
-        dfa = 7
+        state = 7
     elif (c == 'b'):
-        dfa = 10
+        state = 10
     elif (c == 's'):
-        dfa = 11
+        state = 11
     elif (c == 't'):
-        dfa = 13
+        state = 13
     elif(c == 'u'):
-        dfa = 28
+        state = 28
     elif(c == 'i'):
-        dfa = 36
+        state = 36
     elif(c == 'e'):
-        dfa = 42
+        state = 42
     elif(c == 'n'):
-        dfa = 45
+        state = 45
     elif(c == 'w'):
-        dfa = 46
+        state = 46
     # 61 is used to check for any
     # invalid symbol
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state1(c):
     if (c == 'r'):
-        dfa = 2
+        state = 2
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state2(c):
     if (c):
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state3(c):
     if(c == 'o'):
-        dfa = 1
+        state = 1
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state4(c):
     if (c == 'n'):
-        dfa = 5
+        state = 5
     elif (c == 'l'):
-        dfa = 19
+        state = 19
     elif(c == 'f'):
-        dfa = 33
+        state = 33
     elif(c == 's'):
-        dfa = 35
+        state = 35
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state5(c):
     if (c == 'd'):
-        dfa = 6
+        state = 6
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state6(c):
     if(c):
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state7(c):
     if (c == 'e'):
-        dfa = 8
+        state = 8
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state8(c):
     if (c == 't'):
-        dfa = 9
+        state = 9
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state9(c):
     if (c):
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state10(c):
     if (c == 'u'):
-        dfa = 8
+        state = 8
     elif (c == 'e'):
-        dfa = 24
+        state = 24
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state11(c):
     if (c == 'o'):
-        dfa = 12
+        state = 12
     elif (c == 'i'):
-        dfa = 20
+        state = 20
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state12(c):
     if (c):
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state13(c):
     if (c == 'h'):
-        dfa = 14
+        state = 14
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state14(c):
     if (c == 'o'):
-        dfa = 15
+        state = 15
     elif (c == 'a'):
-        dfa = 58
+        state = 58
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state15(c):
     if (c == 'u'):
-        dfa = 16
+        state = 16
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state16(c):
     if (c == 'g'):
-        dfa = 17
+        state = 17
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state17(c):
     if (c == 'h'):
-        dfa = 18
+        state = 18
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state18(c):
     if (c):
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state19(c):
     if (c == 't'):
-        dfa = 13
+        state = 13
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state20(c):
     if (c == 'n'):
-        dfa = 21
+        state = 21
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state21(c):
     if (c == 'c'):
-        dfa = 22
+        state = 22
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state22(c):
     if (c == 'e'):
-        dfa = 23
+        state = 23
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state23(c):
     if (c):
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state24(c):
     if (c == 'c'):
-        dfa = 25
+        state = 25
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state25(c):
     if (c == 'a'):
-        dfa = 26
+        state = 26
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state26(c):
     if (c == 'u'):
-        dfa = 27
+        state = 27
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state27(c):
     if (c == 's'):
-        dfa = 22
+        state = 22
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state28(c):
     if (c == 'n'):
-        dfa = 29
+        state = 29
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state29(c):
     if (c == 'l'):
-        dfa = 38
+        state = 38
     elif(c == 't'):
-        dfa = 30
+        state = 30
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state30(c):
     if (c == 'i'):
-        dfa = 31
+        state = 31
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state31(c):
     if (c == 'l'):
-        dfa = 32
+        state = 32
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state32(c):
     if (c):
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state33(c):
     if (c == 't'):
-        dfa = 34
+        state = 34
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state34(c):
     if (c == 'e'):
-        dfa = 1
+        state = 1
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state35(c):
     if (c):
-        dfa = 61
-    return dfa
+        state = 61
+    return state
     # if (c == 'e'):
-    #     dfa = 1
+    #     state = 1
     # else:
-    #     dfa = 61
-    # return dfa
+    #     state = 61
+    # return state
 
 
 def state36(c):
     if (c == 'f'):
-        dfa = 37
+        state = 37
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state37(c):
     if (c):
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state38(c):
     if (c == 'e'):
-        dfa = 39
+        state = 39
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state39(c):
     if (c == 's'):
-        dfa = 40
+        state = 40
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state40(c):
     if (c == 's'):
-        dfa = 41
+        state = 41
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state41(c):
     if (c):
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state42(c):
     if (c == 'i'):
-        dfa = 43
+        state = 43
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state43(c):
     if (c == 't'):
-        dfa = 44
+        state = 44
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state44(c):
     if (c == 'h'):
-        dfa = 34
+        state = 34
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state45(c):
     if (c == 'o'):
-        dfa = 1
+        state = 1
     elif (c == 'e'):
-        dfa = 42
+        state = 42
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state46(c):
     if (c == 'h'):
-        dfa = 47
+        state = 47
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state47(c):
     if (c == 'e'):
-        dfa = 48
+        state = 48
     elif(c == 'o'):
-        dfa = 52
+        state = 52
     elif(c == 'i'):
-        dfa = 54
+        state = 54
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state48(c):
     if (c == 't'):
-        dfa = 49
+        state = 49
     elif(c == 'r'):
-        dfa = 50
+        state = 50
     elif(c == 'n'):
-        dfa = 52
+        state = 52
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state49(c):
     if (c == 'h'):
-        dfa = 34
+        state = 34
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state50(c):
     if (c == 'e'):
-        dfa = 51
+        state = 51
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state51(c):
     if (c == 'v'):
-        dfa = 34
+        state = 34
     elif(c == 'a'):
-        dfa = 40
+        state = 40
     elif(c):
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state52(c):
     if (c == 'm'):
-        dfa = 55
+        state = 55
     elif(c == 'e'):
-        dfa = 53
+        state = 53
     elif(c == 's'):
-        dfa = 22
+        state = 22
     elif(c):
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state53(c):
     if (c == 'v'):
-        dfa = 34
+        state = 34
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state54(c):
     if (c == 'l'):
-        dfa = 22
+        state = 22
     elif(c == 'c'):
-        dfa = 56
+        state = 56
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state55(c):
     if (c == 'e'):
-        dfa = 53
+        state = 53
     elif(c):
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state56(c):
     if (c == 'h'):
-        dfa = 57
+        state = 57
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state57(c):
     if (c == 'e'):
-        dfa = 53
+        state = 53
     elif(c):
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state58(c):
     if(c == 't'):
-        dfa = 59
+        state = 59
     elif(c == 'n'):
-        dfa = 60
+        state = 60
     else:
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state59(c):
     if(c):
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def state60(c):
     if(c):
-        dfa = 61
-    return dfa
+        state = 61
+    return state
 
 
 def split(string):
@@ -710,7 +710,7 @@ def DFA(data):
 
             if (currentState in acceptingStates):
                 matchedGroup = re.match(
-                    r'(|[~`!@#$%^&()_={}[\]:;,.<>+\/?-])(\w+)(|[ ~`!@#$%^&()_={}[\]:;,.<>+\/?-])', word)
+                    r'(|[~`!@#$%^&()_={}[\]:;,.<>+\/?-]+)(\w+)(|[ ~`!@#$%^&()_={}[\]:;,.<>+\/?-]+)', word)
                 matchedWord = matchedGroup.group(2)
                 tempWord = re.sub(r'[^\w]', ' ', word).strip().casefold()
 

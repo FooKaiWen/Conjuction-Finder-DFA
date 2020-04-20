@@ -1,1 +1,1 @@
-{"outputText": ". <b>and</b>, \n", "outputStats": {"and": {"num": 1, "type": "Coordinating Conjunction"}}, "outputUnique": 1}
+{"outputText": "<b>and</b> he \n <b>yet</b>. \n", "outputStats": {"and": {"num": 1, "type": "Coordinating Conjunction"}, "yet": {"num": 1, "type": "Coordinating Conjunction"}}, "outputUnique": 2}

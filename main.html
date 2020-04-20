@@ -12,13 +12,19 @@
         <div>
             <textarea id="w3mission" rows="10" cols="100" data-bind="textInput: inputText"></textarea>
         </div>
-        <button data-bind="click: process">Process</button>
+        <button data-bind="click: process">Find</button>
         <!-- <p id="input"><b>Input: </b></p>
         <input type="file" id="input-file">
         <p id="content-target"></p> -->
         <hr>
         <p id="output"><b>Output: </b></p>
         <hr>
+        <!-- ko ifnot: uniqueNum() -->
+        <p><b>Status:</b> Rejected</p>
+        <!-- /ko -->
+        <!-- ko if: uniqueNum() -->
+        <p><b>Status:</b> Accepted</p>
+        <!-- /ko -->
         <h3>Statistics</h3>
         <p>Unique Conjunction Found: <span data-bind="text: uniqueNum"></span></p>
         <!-- ko if: uniqueNum() -->
