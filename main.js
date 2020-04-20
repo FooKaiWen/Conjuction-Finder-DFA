@@ -28,7 +28,6 @@ var Model = function () {
         tempDiv.innerHTML = data;
         var title = document.getElementById("output");
         title.parentNode.insertBefore(tempDiv, title.nextSibling);
-        // title.parentNode.appendChild(tempDiv);
     })
 };
 
