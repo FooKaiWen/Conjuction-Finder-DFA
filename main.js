@@ -1,38 +1,3 @@
-// document.getElementById('input-file')
-//     .addEventListener('change', getFile)
-
-function getFile(event) {
-    const input = event.target
-    if ('files' in input && input.files.length > 0) {
-        placeFileContent(
-            document.getElementById('content-target'),
-            input.files[0])
-    }
-}
-
-function placeFileContent(target, file) {
-    readFileContent(file).then(content => {
-        saveDataToFile(content)
-        content = content.replace(/(\r\n|\n|\r)/g, "<br />");
-        target.innerHTML = content
-    }).catch(error => console.log(error))
-}
-
-function saveDataToFile(data) {
-    var blob = new Blob([data],
-        { type: "text/plain;charset=utf-8" });
-    saveAs(blob, "static.txt");
-}
-
-function readFileContent(file) {
-    const reader = new FileReader()
-    return new Promise((resolve, reject) => {
-        reader.onload = event => resolve(event.target.result)
-        reader.onerror = error => reject(error)
-        reader.readAsText(file)
-    })
-}
-
 var Model = function () {
     var self = this;
     self.data = ko.observable({})
@@ -104,5 +69,3 @@ async function processText(inputText) {
         text : inputText
     }, model.status)
 }
-
-// readText()

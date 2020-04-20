@@ -1,6 +1,5 @@
 var fs = require('fs')
 path = require('path')
-// filePath = path.join(__dirname, 'start.html');
 
 filePath = 'output.json'
 var model = function(){}
